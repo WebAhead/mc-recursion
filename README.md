@@ -15,7 +15,7 @@ a little work it will become very understandable and powerful.
 
 In order to write recursive functions you'll need to think about your problem in repeatable solvable chunks.
 
-Think about it this way: if you know how solve the minimal case then you'll know how to apply the same rules for a the same problem with a bigger scope.
+Think about it this way: if you know how solve the minimal case then you'll know how to apply the same rules for the same problem with a bigger scope.
 
 A classic recursive example is the factorial function `!`:
 
