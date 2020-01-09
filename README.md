@@ -14,7 +14,8 @@ a little work it will become very understandable and powerful.
 ## Thinking recursively
 
 In order to write recursive functions you'll need to think about your problem in repeatable solvable chunks.
-Think about it this way: if you know how solve the minimal case then you'll know how to apply the same rules for a the same problem but in a bigger scope.
+
+Think about it this way: if you know how solve the minimal case then you'll know how to apply the same rules for a the same problem with a bigger scope.
 
 A classic recursive example is the factorial function `!`:
 
@@ -27,7 +28,7 @@ To solve `(x-1)!` we need to know the answer to `(x-2)!` and so on...
 
 The minimal case which we already know the answer to is `1!` which is 1.
 
-Here is how it looks:
+Here is how it looks like:
 
 ![5 factorial](https://user-images.githubusercontent.com/22002193/72061904-66157700-32df-11ea-8b25-4ef1531a021a.jpeg)
 
