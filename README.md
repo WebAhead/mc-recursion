@@ -72,7 +72,11 @@ const shout = words => {
     return [];
   } else {
     // recursion! but this time we are returning something
-    return [words[0].toUpperCase()].concat(shout(words.slice(1)));
+    const firstWordShouted =  words[0].toUpperCase();
+    const restOfTheWords = words.slice(1);
+    const restOfTheWordsShouted = shout(restOfTheWords);
+    
+    return [firstWordShouted].concat(restOfTheWordsShouted);
   }
 };
 
@@ -83,21 +87,13 @@ console.log(shout(['I', 'am', 'a', 'sensitive', 'boy']));
 The recursion might be a bit hard to parse. SO LET'S BREAK IT
 DOWN!
 
-`[(words[0].toUpperCase())]` - we uppercase the first word in our array, and stick it inside a new array
+`const firstWordShouted =  words[0].toUpperCase();` - we uppercase the first word in our array.
 
-`.concat(...)` - we are appending something to the end of the array
+`const restOfTheWords = words.slice(1);` - returns a new array with the first word removed.
 
-`shout(words.slice(1))` - and that thing is shout invoked with our remaining words.
+`const restOfTheWordsShouted = shout(restOfTheWords);` - returns the rest of words shouted using the same function.
 
-We could also write it out like this:
-
-```js
-const firstWord = words[0];
-const restOfTheWords = words.slice(1);
-const firstWordShouted = firstWord.toUpperCase();
-const restOfTheWordsShouted = shout(restOfTheWords);
-return [firstWordShouted].concat(restOfTheWordsShouted);
-```
+`return [firstWordShouted].concat(restOfTheWordsShouted);` - appending `restOfTheWordsShouted` to the end of a new array which has `firstWordShouted` as the first index.
 
 ## Exercises!
 
